@@ -219,7 +219,13 @@ function createSelectS122() {
 // Напишите функцию, которая получает строку - дату и возвращает true если день недели рабочий, и false, если выходной. Выходными считаем дни Sunday, Saturday.
 
 function t14(time) {
+  const date = new Date(time);
+  const dayOfWeek = date.getDay();
 
+  if (dayOfWeek === 0 || dayOfWeek === 6) {
+    return false; // выходной
+  }
+  return true; // рабочий день
 }
 
 document.querySelector('.b-14').addEventListener('click', () => {
