@@ -19,8 +19,11 @@ document.querySelector('.b-1').addEventListener('click', () => {
 
 
 function t02(sec) {
-
+  const date = new Date(sec);
+  const year = date.getUTCFullYear();
+  return year;
 }
+
 document.querySelector('.b-2').addEventListener('click', () => {
   document.querySelector('.out-2').textContent = t02(894330000);
 });
