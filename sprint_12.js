@@ -19,8 +19,8 @@ document.querySelector('.b-1').addEventListener('click', () => {
 
 
 function t02(sec) {
-  const date = new Date(sec);
-  const year = date.getUTCFullYear();
+  const date = new Date(sec * 1000);
+  const year = date.getFullYear();
   return year;
 }
 
@@ -33,7 +33,8 @@ document.querySelector('.b-2').addEventListener('click', () => {
 // Напишите функцию, которая получает время в секундах как аргумент и возвращает номер месяца данного времени.
 
 function t03(sec) {
-
+  const date = new Date(sec * 1000);
+  return date.getMonth();
 }
 
 document.querySelector('.b-3').addEventListener('click', () => {
