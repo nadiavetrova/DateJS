@@ -47,7 +47,9 @@ document.querySelector('.b-3').addEventListener('click', () => {
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function t04(sec) {
-
+  const date = new Date(sec * 1000);
+  const monthIndex = date.getMonth();
+  return months[monthIndex];
 }
 
 document.querySelector('.b-4').addEventListener('click', () => {
