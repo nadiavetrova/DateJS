@@ -78,7 +78,9 @@ document.querySelector('.b-5').addEventListener('click', () => {
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function t06(sec) {
-
+  const date = new Date(sec * 1000);
+  const dayIndex = date.getDate();
+  return days[dayIndex]
 }
 
 document.querySelector('.b-6').addEventListener('click', () => {
