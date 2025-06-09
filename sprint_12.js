@@ -93,11 +93,13 @@ document.querySelector('.b-6').addEventListener('click', () => {
 // Напишите функцию, которая получает время в секундах как аргумент и возвращает строку в виде строки 'часы:минуты'. 
 
 function t07(sec) {
-
+  const date = new Date(sec * 1000);
+  const strTime = date.getMinutes() + ':' + date.getSeconds();
+  return strTime
 }
 
 document.querySelector('.b-7').addEventListener('click', () => {
-  document.querySelector('.out-7').textContent = t07(894355740);
+  document.querySelector('.out-7').textContent = t07(894355795540);
 });
 
 
@@ -105,7 +107,7 @@ document.querySelector('.b-7').addEventListener('click', () => {
 //  Напишите функцию, которая получает строку времени, как аргумент и возвращает время в миллисекундах.
 
 function t08(time) {
-
+  return Date.parse(time);
 }
 
 document.querySelector('.b-8').addEventListener('click', () => {
