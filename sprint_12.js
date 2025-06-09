@@ -170,7 +170,13 @@ document.querySelector('.b-11').addEventListener('click', () => {
 // Напишите функцию, которая создает объект Date и устанавливает год 2024. Месяц и день - считываются из select.s-121 и select.s-122 и тоже задаются объекту. Функция должна возвращать созданный объект.
 
 function t12() {
-
+  const s121 = document.querySelector('select.s-121');
+  const s122 = document.querySelector('select.s-122');
+  const date = new Date();
+  date.setFullYear(2024);
+  date.setMonth(s121.value);
+  date.setDate(s122.value);
+  return date
 }
 
 document.querySelector('.b-12').addEventListener('click', () => {
