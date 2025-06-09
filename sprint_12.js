@@ -156,7 +156,9 @@ document.querySelector('.b-10').addEventListener('click', () => {
 // Напишите функцию, которая создает объект Date и устанавливает год 1988. Функция должна возвращать созданный объект. 
 
 function t11() {
-
+  const date = new Date();
+  date.setFullYear(1988);
+  return date
 }
 
 document.querySelector('.b-11').addEventListener('click', () => {
