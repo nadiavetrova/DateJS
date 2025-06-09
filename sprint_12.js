@@ -62,7 +62,8 @@ document.querySelector('.b-4').addEventListener('click', () => {
 
 
 function t05(sec) {
-
+  const date = new Date(sec * 1000);
+  return date.getDate();
 }
 
 document.querySelector('.b-5').addEventListener('click', () => {
