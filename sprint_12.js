@@ -119,7 +119,8 @@ document.querySelector('.b-8').addEventListener('click', () => {
 // Напишите функцию, которая получает дату из .i-9 и возвращает данную дату в миллисекундах.
 
 function t09() {
-
+  const i9 = document.querySelector('.i-9').value;
+  return Date.parse(i9)
 }
 
 document.querySelector('.b-9').addEventListener('click', () => {
