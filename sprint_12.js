@@ -135,7 +135,16 @@ document.querySelector('.b-9').addEventListener('click', () => {
 const lZ = (data) => String(data).padStart(2, '0');
 
 function t10(time) {
+  const date = new Date(time * 1000); // секунды → миллисекунды
 
+  const year = date.getFullYear();
+  const month = lZ(date.getMonth() + 1);
+  const day = lZ(date.getDate());
+
+  const formatted = `${year}-${month}-${day}`;
+
+  const i10 = document.querySelector('input.i-10');
+  i10.value = formatted;
 }
 
 document.querySelector('.b-10').addEventListener('click', () => {
