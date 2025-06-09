@@ -236,7 +236,9 @@ document.querySelector('.b-14').addEventListener('click', () => {
 // Напишите функцию, которая возвращает время последней полуночи в секундах.
 
 function t15() {
-
+  const now = new Date();
+  now.setHours(0, 0, 0, 0); // установить 00:00:00.000
+  return Math.floor(now.getTime() / 1000); // преобразуем в секунды
 }
 
 document.querySelector('.b-15').addEventListener('click', () => {
@@ -245,11 +247,15 @@ document.querySelector('.b-15').addEventListener('click', () => {
 
 
 
+
 // Task 16
 // Напишите функцию, которая возвращает время следующей полуночи в секундах.
 
 function t16() {
-
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  now.setDate(now.getDate() + 1);
+  return Math.floor(now.getTime() / 1000);
 }
 
 document.querySelector('.b-16').addEventListener('click', () => {
