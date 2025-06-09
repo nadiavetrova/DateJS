@@ -5,7 +5,9 @@
 // Напишите функцию, которая возвращает текущее время (в миллисекундах) с помощью Date.now().
 
 function t01() {
-
+  const now = new Date();
+  const parsedDate = Date.parse(now);
+  return parsedDate
 }
 
 document.querySelector('.b-1').addEventListener('click', () => {
