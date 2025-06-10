@@ -327,8 +327,21 @@ document.querySelector('.b-19').addEventListener('click', () => {
 // { 'Y' : 2024, 'y' : 24, 'M' : 5, 'M0': '05', 'd' : 7, 'd0' : '07'}
 // { 'Y' : 2024, 'y' : 24, 'M' : 15, 'M0': '15', 'd' : 17, 'd0' : '17'}
 
-function t20(time) {
+const lZZZ = (n) => String(n).padStart(2, '0');
 
+function t20(time) {
+  const date = new Date(time);
+
+  const obj = {
+    'Y': date.getFullYear(),
+    'y': String(date.getFullYear()).slice(-2),
+    'M': date.getMonth() + 1,
+    'M0': lZZZ(date.getMonth() + 1),
+    'd': date.getDate(),
+    'd0': lZZZ(date.getDate())
+  };
+
+  return obj;
 }
 
 document.querySelector('.b-20').addEventListener('click', () => {
