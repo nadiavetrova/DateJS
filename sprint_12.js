@@ -281,7 +281,23 @@ document.querySelector('.b-17').addEventListener('click', () => {
 // Напишите функцию, которая возвращает массив дат понедельников текущего месяца. Даты в массиве должны идти по возрастанию.
 
 function t18() {
+  const result = [];
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
 
+  // начинаем с 1-го числа текущего месяца
+  const date = new Date(year, month, 1);
+
+  // идём по всем дням месяца
+  while (date.getMonth() === month) {
+    if (date.getDay() === 1) { // 1 — это понедельник
+      result.push(date.getDate());
+    }
+    date.setDate(date.getDate() + 1);
+  }
+
+  return result;
 }
 
 document.querySelector('.b-18').addEventListener('click', () => {
