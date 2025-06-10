@@ -307,8 +307,15 @@ document.querySelector('.b-18').addEventListener('click', () => {
 // Task 19
 // Напишите функцию, которая получает строку даты и времени и возвращает ее в виде 'YYYY-MM-DD' с ведущим нулем (при необходимости).
 
-function t19(time) {
+const lZZ = (n) => String(n).padStart(2, '0');
 
+function t19(time) {
+  const date = new Date(time);
+  const year = date.getFullYear();
+  const month = lZZ(date.getMonth() + 1); // месяцы от 0 до 11
+  const day = lZZ(date.getDate());
+
+  return `${year}-${month}-${day}`;
 }
 
 document.querySelector('.b-19').addEventListener('click', () => {
