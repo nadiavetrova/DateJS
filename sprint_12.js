@@ -266,7 +266,11 @@ document.querySelector('.b-16').addEventListener('click', () => {
 // Напишите функцию, которая возвращает количество суток прошедших с даты, переданной в функцию.
 
 function t17(time) {
-
+  const date = new Date(time);
+  const now = new Date();
+  const diffMs = now - date;
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)); // переводим в дни
+  return diffDays;
 }
 
 document.querySelector('.b-17').addEventListener('click', () => {
